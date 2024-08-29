@@ -1,0 +1,58 @@
+.hero-section {
+  @apply flex flex-col gap-4;
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--hero-section-background-color);
+  z-index: 2;
+}
+
+.hero-section > .hero-content-container {
+  @apply flex-col flex flex-1 gap-4 items-center md:flex-row;
+}
+
+.hero-section > .hero-content-container > .hero-content-text-container {
+  @apply justify-center items-center flex flex-col gap-8 md:justify-normal md:items-start;
+}
+
+.hero-section > .hero-content-container > .hero-content-text-container > * {
+  @apply text-center md:text-start;
+}
+
+.hero-section
+  > .hero-content-container
+  > .hero-content-text-container
+  > .hero-content-title {
+  font-size: 4rem;
+  line-height: 1;
+  @apply font-black;
+}
+
+.hero-section
+  > .hero-content-container
+  > .hero-content-text-container
+  > .hero-content-text {
+  font-size: 1.25rem;
+  @apply font-normal;
+}
+
+.hero-section
+  > .hero-content-container
+  > .hero-content-text-container
+  > .hero-content-button-group-container {
+  @apply flex gap-4;
+}
+
+.hero-section > .hero-section-card {
+  @apply flex-col gap-8 md:flex-row md:gap-20;
+}
+
+.hero-section > .hero-section-right-bottom-area {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hero-section-right-bottom-area-background-color);
+  clip-path: polygon(2% 100%, 100% 100%, 100% 24%);
+  z-index: -1;
+}

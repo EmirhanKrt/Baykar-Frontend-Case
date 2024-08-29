@@ -1,0 +1,14 @@
+.header > .header-logo-container > .header-logo {
+  font-size: 2rem;
+  @apply font-bold;
+  line-height: 35.2px;
+  color: var(--primary-color);
+}
+
+.header > .header-navigation-container {
+  @apply flex items-center gap-4;
+}
+
+.header > .header-navigation-container > .header-hamburger-menu-container {
+  @apply flex;
+}
