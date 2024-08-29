@@ -1,7 +1,3 @@
-.header {
-  @apply container flex justify-between items-center p-4 m-auto;
-}
-
 .header > .header-logo-container > .header-logo {
   font-size: 2rem;
   @apply font-bold;
@@ -11,4 +7,8 @@
 
 .header > .header-navigation-container {
   @apply flex items-center gap-4;
+}
+
+.header > .header-navigation-container > .header-hamburger-menu-container {
+  @apply flex;
 }

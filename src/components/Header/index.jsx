@@ -19,7 +19,7 @@ const Header = () => {
   const isMobileView = width < 768;
 
   return (
-    <header className="header">
+    <header className="header content-container">
       <div className="header-logo-container">
         <a href="/" className="header-logo">
           Collers
