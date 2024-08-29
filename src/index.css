@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +16,7 @@
   --text-color-over-dark-background: #ffffff;
 
   --background-color: linear-gradient(180deg, #fffbeb 0%, #ffffff 89.63%);
-  --hero-section-left-bottom-area-background-color: #fef3c7;
+  --hero-section-background-color: #fef3c7;
   --hero-section-right-top-area-background-color: #fffcec;
   --footer-background-color: var(--secondary-color);
 
@@ -20,7 +24,7 @@
 }
 
 body {
-  height: 100svh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -32,26 +36,13 @@ body {
   font-style: normal;
 }
 
-.roboto-light {
-  font-family: 'Roboto', system-ui;
-  font-weight: 300;
-  font-style: normal;
+a {
+  color: var(--text-color);
+  cursor: alias;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
 }
 
-.roboto-regular {
-  font-family: 'Roboto', system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: 'Roboto', system-ui;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: 'Roboto', system-ui;
-  font-weight: 700;
-  font-style: normal;
+a:hover {
+  text-decoration: underline;
 }

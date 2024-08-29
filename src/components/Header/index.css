@@ -1,0 +1,14 @@
+.header {
+  @apply container flex justify-between items-center p-4 m-auto;
+}
+
+.header > .header-logo-container > .header-logo {
+  font-size: 2rem;
+  @apply font-bold;
+  line-height: 35.2px;
+  color: var(--primary-color);
+}
+
+.header > .header-navigation-container {
+  @apply flex items-center gap-4;
+}
