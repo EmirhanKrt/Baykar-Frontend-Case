@@ -4,10 +4,8 @@ import Item from './Item';
 import './index.css';
 
 const Navigation = ({ children, className = '' }) => {
-  let classNameProperty = 'navigation';
-
-  classNameProperty = amplifyClassnamePropWithStaticClassname(
-    classNameProperty,
+  const classNameProperty = amplifyClassnamePropWithStaticClassname(
+    'navigation',
     className
   );
 

@@ -21,30 +21,32 @@ const CheckMarkIcon = (
 
 const WhyJoinUsSection = () => {
   return (
-    <section className="why-join-us-section section-container content-container">
-      <div className="why-join-us-container">
-        <div className="why-join-us-text-container">
-          <Section.Title>Why join us</Section.Title>
-          <UnorderedList>
-            <UnorderedList.Item listIcon={CheckMarkIcon}>
-              Est et in pharetra magna adipiscing ornare aliquam.
-            </UnorderedList.Item>
-            <UnorderedList.Item listIcon={CheckMarkIcon}>
-              Tellus arcu sed consequat ac velit ut eu blandit.
-            </UnorderedList.Item>
-            <UnorderedList.Item listIcon={CheckMarkIcon}>
-              Ullamcorper ornare in et egestas dolor orci.
-            </UnorderedList.Item>
-          </UnorderedList>
-          <Link referTo={'/sign-up'} className="w-fit" isButton={true}>
-            Sign up now
-          </Link>
+    <Section className="why-join-us-section">
+      <Section.Content className="why-join-us-content-container">
+        <div className="why-join-us-container">
+          <div className="why-join-us-text-container">
+            <Section.Title>Why join us</Section.Title>
+            <UnorderedList>
+              <UnorderedList.Item listIcon={CheckMarkIcon}>
+                Est et in pharetra magna adipiscing ornare aliquam.
+              </UnorderedList.Item>
+              <UnorderedList.Item listIcon={CheckMarkIcon}>
+                Tellus arcu sed consequat ac velit ut eu blandit.
+              </UnorderedList.Item>
+              <UnorderedList.Item listIcon={CheckMarkIcon}>
+                Ullamcorper ornare in et egestas dolor orci.
+              </UnorderedList.Item>
+            </UnorderedList>
+            <Link referTo={'/sign-up'} className="w-fit" isButton={true}>
+              Sign up now
+            </Link>
+          </div>
+          <div>
+            <img src="" alt="image" />
+          </div>
         </div>
-        <div>
-          <img src="" alt="image" />
-        </div>
-      </div>
-    </section>
+      </Section.Content>
+    </Section>
   );
 };
 

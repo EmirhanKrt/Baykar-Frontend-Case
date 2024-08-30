@@ -1,10 +1,8 @@
 import { amplifyClassnamePropWithStaticClassname } from '../../utils';
 
 const Item = ({ className = '', listIcon = null, children }) => {
-  let classNameProperty = 'unordered-list-item';
-
-  classNameProperty = amplifyClassnamePropWithStaticClassname(
-    classNameProperty,
+  const classNameProperty = amplifyClassnamePropWithStaticClassname(
+    'unordered-list-item',
     className
   );
 

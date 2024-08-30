@@ -1,8 +1,8 @@
-.why-join-us-section {
-  @apply md:py-40;
+.why-join-us-section > .why-join-us-content-container {
+  @apply px-4 py-12 w-full md:py-40;
 }
 
-.why-join-us-section > .why-join-us-container {
+.why-join-us-section > .why-join-us-content-container > .why-join-us-container {
   box-shadow: 0px 0px 10px 0px #00000012, 0px 20px 25px -5px #0000001a;
 
   @apply bg-[var(--why-join-us-section-background-color)];
@@ -12,6 +12,9 @@
   @apply rounded-[30px] w-full;
 }
 
-.why-join-us-section > .why-join-us-container > .why-join-us-text-container {
+.why-join-us-section
+  > .why-join-us-content-container
+  > .why-join-us-container
+  > .why-join-us-text-container {
   @apply flex flex-col gap-6;
 }

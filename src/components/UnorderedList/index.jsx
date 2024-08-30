@@ -4,10 +4,8 @@ import Item from './Item';
 import './index.css';
 
 const UnorderedList = ({ className = '', children }) => {
-  let classNameProperty = 'unordered-list';
-
-  classNameProperty = amplifyClassnamePropWithStaticClassname(
-    classNameProperty,
+  const classNameProperty = amplifyClassnamePropWithStaticClassname(
+    'unordered-list',
     className
   );
 

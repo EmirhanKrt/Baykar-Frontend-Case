@@ -1,5 +1,4 @@
 import Link from '../Link';
-import './index.css';
 
 const Item = ({ referTo, displayText, isButton = false, target = '_top' }) => {
   return (
