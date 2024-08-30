@@ -1,23 +1,41 @@
-.header {
-  @apply p-4;
+.header-section {
+  background: var(--hero-section-background-color);
+  @apply p-0 top-0 sticky z-10;
 }
 
-.header > .header-logo-container > .header-logo {
-  font-size: 2rem;
-  @apply font-bold;
-  line-height: 35.2px;
+.header-section > .header-content-container {
+  @apply p-4 md:p-[1.375rem];
+}
+
+.header-section
+  > .header-content-container
+  > .header-logo-container
+  > .header-logo-link {
   color: var(--primary-color);
+  @apply font-bold text-[2rem] leading-[35.2px];
 }
 
-.header > .header-navigation-container {
+.header-section
+  > .header-content-container
+  > .header-logo-container
+  > .header-logo-link
+  > .link-item-text {
+  @apply p-0;
+}
+
+.header-section > .header-content-container > .header-navigation-container {
   @apply flex items-center gap-4;
 }
 
-.header > .header-navigation-container > .header-hamburger-menu-container {
+.header-section
+  > .header-content-container
+  > .header-navigation-container
+  > .header-hamburger-menu-container {
   @apply flex;
 }
 
-.header
+.header-section
+  > .header-content-container
   > .header-navigation-container
   > .header-hamburger-menu-container
   > .header-hamburger-menu {

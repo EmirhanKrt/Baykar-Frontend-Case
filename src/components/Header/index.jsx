@@ -1,14 +1,14 @@
 import { useCallback, useState } from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 
+import Section from '../Section';
 import HeaderNavigation from './HeaderNavigation';
 import Drawer from '../Drawer';
 import Button from '../Button';
+import Link from '../Link';
 
 import HamburgerMenuIcon from '../../assets/hamburger-menu-logo.svg';
 import './index.css';
-import Link from '../Link';
-
 const Header = () => {
   const { width } = useWindowSize();
 
@@ -21,34 +21,36 @@ const Header = () => {
   const isMobileView = width < 768;
 
   return (
-    <header className="header content-container">
-      <div className="header-logo-container">
-        <Link className="header-logo" referTo={'/'}>
-          <h1 style={{ all: 'unset' }}>Collers</h1>
-        </Link>
-      </div>
+    <Section className="header-section">
+      <Section.Content type="header" className="header-content-container">
+        <div className="header-logo-container">
+          <Link className="header-logo-link" referTo={'/'}>
+            <h1 style={{ all: 'inherit' }}>Collers</h1>
+          </Link>
+        </div>
 
-      <div className="header-navigation-container">
-        {isMobileView ? (
-          <>
-            <div
-              className="header-hamburger-menu-container"
-              onClick={handleOpen}
-            >
-              <Button className="header-hamburger-menu">
-                <img src={HamburgerMenuIcon} alt="Menu" />
-              </Button>
-            </div>
+        <div className="header-navigation-container">
+          {isMobileView ? (
+            <>
+              <div
+                className="header-hamburger-menu-container"
+                onClick={handleOpen}
+              >
+                <Button className="header-hamburger-menu">
+                  <img src={HamburgerMenuIcon} alt="Menu" />
+                </Button>
+              </div>
 
-            <Drawer open={open} onClose={handleClose}>
-              <HeaderNavigation isMobileView={true} />
-            </Drawer>
-          </>
-        ) : (
-          <HeaderNavigation />
-        )}
-      </div>
-    </header>
+              <Drawer open={open} onClose={handleClose}>
+                <HeaderNavigation isMobileView={true} />
+              </Drawer>
+            </>
+          ) : (
+            <HeaderNavigation />
+          )}
+        </div>
+      </Section.Content>
+    </Section>
   );
 };
 

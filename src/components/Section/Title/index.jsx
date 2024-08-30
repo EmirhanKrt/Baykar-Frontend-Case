@@ -2,10 +2,8 @@ import { amplifyClassnamePropWithStaticClassname } from '../../../utils';
 import './index.css';
 
 const Title = ({ className = '', children }) => {
-  let classNameProperty = 'section-title';
-
-  classNameProperty = amplifyClassnamePropWithStaticClassname(
-    classNameProperty,
+  const classNameProperty = amplifyClassnamePropWithStaticClassname(
+    'section-title',
     className
   );
 

@@ -10,20 +10,17 @@ import PurpleCircleIcon from '../../assets/purple-circle-icon.svg';
 
 const Card = ({ src, subIconSrc, title, description }) => {
   return (
-    <div
-      className="items-center flex flex-col gap-[10px] md:items-start"
-      key={title}
-    >
-      <div className="relative">
-        <img src={src} alt={title + ' Icon'} className="z-10 relative" />
+    <div className="hero-card-item" key={title}>
+      <div className="hero-card-icon-container">
+        <img src={src} alt={title + ' Icon'} className="hero-card-main-icon" />
         <img
           src={subIconSrc}
           alt={title + ' Sub Icon'}
-          className="absolute left-8 top-0"
+          className="hero-card-background-icon absolute"
         />
       </div>
       <Section.SubTitle>{title}</Section.SubTitle>
-      <Section.Description className="font-normal text-center md:text-start">
+      <Section.Description className="hero-card-description">
         {description}
       </Section.Description>
     </div>
@@ -55,11 +52,7 @@ const cardDetails = [
 ];
 
 const HeroCard = () => {
-  return (
-    <div className="hero-section-card section-container content-container">
-      {cardDetails.map(Card)}
-    </div>
-  );
+  return cardDetails.map(Card);
 };
 
 export default HeroCard;

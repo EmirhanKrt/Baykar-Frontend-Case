@@ -21,7 +21,7 @@ const PlayButtonIcon = (
 
 const HeroContent = () => {
   return (
-    <div className="hero-content-container section-container content-container">
+    <>
       <div className="hero-content-text-container">
         <h2 className="hero-content-title">Collectible Sneakers</h2>
         <Section.Description className="hero-content-text">
@@ -40,10 +40,10 @@ const HeroContent = () => {
         <img
           src={HeroSectionImage}
           alt="Hero Section Image"
-          className="max-w-[300px] xl:max-w-[486px]"
+          className="w-full max-w-[361px] md:w-auto xl:max-w-[486px]"
         />
       </div>
-    </div>
+    </>
   );
 };
 

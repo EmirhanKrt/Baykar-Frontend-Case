@@ -30,7 +30,6 @@ html {
 }
 
 body {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   background-image: var(--background-color);
@@ -42,12 +41,4 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   overflow-x: hidden;
-}
-
-.content-container {
-  @apply container flex justify-between items-center px-4 py-6 mx-auto;
-}
-
-.section-container {
-  @apply py-12 md:py-20;
 }

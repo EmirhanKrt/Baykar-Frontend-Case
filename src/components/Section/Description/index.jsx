@@ -2,10 +2,8 @@ import { amplifyClassnamePropWithStaticClassname } from '../../../utils';
 import './index.css';
 
 const Description = ({ className = '', children }) => {
-  let classNameProperty = 'section-description';
-
-  classNameProperty = amplifyClassnamePropWithStaticClassname(
-    classNameProperty,
+  const classNameProperty = amplifyClassnamePropWithStaticClassname(
+    'section-description',
     className
   );
 
