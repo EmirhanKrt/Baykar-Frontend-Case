@@ -1,0 +1,17 @@
+button {
+  @apply text-[var(--primary-color)] tracking-wide font-medium text-base;
+  @apply transition ease-in-out duration-300;
+  @apply flex items-center gap-0 px-[1.125rem] py-2;
+  @apply cursor-pointer;
+
+  @apply hover:opacity-70;
+}
+
+button > .button-item-text {
+  @apply py-0 px-2;
+}
+
+button.over-dark-background {
+  @apply text-[var(--text-color-over-dark-background)];
+  @apply border-2 border-[var(--text-color-over-dark-background)];
+}

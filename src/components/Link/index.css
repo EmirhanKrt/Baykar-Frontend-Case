@@ -1,0 +1,29 @@
+a {
+  @apply text-[var(--text-color)];
+  @apply cursor-alias no-underline;
+  @apply transition ease-in-out duration-300;
+  @apply hover:underline;
+}
+
+a.button {
+  @apply text-[var(--primary-color)] leading-[24px] tracking-wide font-medium;
+  @apply cursor-pointer rounded-lg;
+  @apply flex items-center justify-center gap-4 !p-[12px];
+  @apply border-2 border-[var(--primary-color)];
+
+  @apply hover:text-[var(--hero-section-right-bottom-area-background-color)];
+  @apply hover:bg-[var(--primary-color)];
+  @apply hover:no-underline;
+}
+
+a > .link-item-text {
+  @apply px-4;
+}
+
+a.button.over-dark-background {
+  @apply text-[var(--text-color-over-dark-background)];
+  @apply border-2 border-[var(--text-color-over-dark-background)];
+
+  @apply hover:bg-[var(--text-color-over-dark-background)];
+  @apply hover:text-[var(--secondary-color)];
+}

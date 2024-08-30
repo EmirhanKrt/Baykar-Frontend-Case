@@ -1,17 +1,19 @@
 import { amplifyClassnamePropWithStaticClassname } from '../../utils';
 import './index.css';
 
-const Button = ({
+const Link = ({
+  referTo,
+  target = '_top',
   className = '',
   isOverDarkBackground = false,
   leftIcon = null,
   rightIcon = null,
-  onClick = (event) => {
-    console.log('Clicked Button', event.target);
-  },
+  isButton = false,
   children
 }) => {
   let classNameProperty = '';
+
+  if (isButton) classNameProperty = 'button';
 
   if (isOverDarkBackground) classNameProperty += ' over-dark-background';
 
@@ -21,12 +23,12 @@ const Button = ({
   );
 
   return (
-    <button className={classNameProperty} onClick={onClick}>
+    <a className={classNameProperty} href={referTo} target={target}>
       {leftIcon}
-      <div className="button-item-text">{children}</div>
+      <div className="link-item-text">{children}</div>
       {rightIcon}
-    </button>
+    </a>
   );
 };
 
-export default Button;
+export default Link;

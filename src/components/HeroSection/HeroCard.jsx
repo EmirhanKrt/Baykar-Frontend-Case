@@ -1,26 +1,28 @@
+import Section from '../Section';
+
 import ThropyIcon from '../../assets/thropy-icon.svg';
 import TunnelIcon from '../../assets/tunnel-icon.svg';
 import TvIcon from '../../assets/tv-icon.svg';
+
 import BlueTriangleIcon from '../../assets/blue-triangle-icon.svg';
 import GreenTriangleIcon from '../../assets/green-triangle-icon.svg';
 import PurpleCircleIcon from '../../assets/purple-circle-icon.svg';
 
 const Card = ({ src, subIconSrc, title, description }) => {
   return (
-    <div
-      className="items-center flex flex-col gap-4 md:items-start"
-      key={title}
-    >
-      <div className="relative">
-        <img src={src} alt={title + ' Icon'} className="z-10 relative" />
+    <div className="hero-card-item" key={title}>
+      <div className="hero-card-icon-container">
+        <img src={src} alt={title + ' Icon'} className="hero-card-main-icon" />
         <img
           src={subIconSrc}
           alt={title + ' Sub Icon'}
-          className="absolute left-8 top-0"
+          className="hero-card-background-icon absolute"
         />
       </div>
-      <h3 className="font-medium">{title}</h3>
-      <p className="font-normal text-center md:text-start">{description}</p>
+      <Section.SubTitle>{title}</Section.SubTitle>
+      <Section.Description className="hero-card-description">
+        {description}
+      </Section.Description>
     </div>
   );
 };
@@ -50,11 +52,7 @@ const cardDetails = [
 ];
 
 const HeroCard = () => {
-  return (
-    <div className="hero-section-card content-container">
-      {cardDetails.map(Card)}
-    </div>
-  );
+  return cardDetails.map(Card);
 };
 
 export default HeroCard;

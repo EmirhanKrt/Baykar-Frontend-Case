@@ -18,9 +18,12 @@
   --background-color: linear-gradient(180deg, #fffbeb 0%, #ffffff 89.63%);
   --hero-section-background-color: #fffcec;
   --hero-section-right-bottom-area-background-color: #fef3c7;
+  --highlighted-product-section-background-color: var(--secondary-color);
+  --why-join-us-section-background-color: #ffffff;
   --footer-background-color: var(--secondary-color);
 
-  --border-color: #e2e8f0;
+  --section-border-color: #e2e8f0;
+  --highlighted-product-card-border-color: var(--secondary-color);
 }
 
 html {
@@ -28,7 +31,6 @@ html {
 }
 
 body {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   background-image: var(--background-color);
@@ -40,72 +42,4 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   overflow-x: hidden;
-}
-
-a {
-  color: var(--text-color);
-  cursor: alias;
-  transition: 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a.button {
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  padding: 8px 18px;
-
-  @apply font-medium cursor-pointer rounded-lg;
-}
-
-a.button:hover {
-  background-color: var(--primary-color);
-  color: var(--hero-section-right-bottom-area-background-color);
-
-  @apply no-underline;
-}
-
-a.button:hover {
-  background-color: var(--primary-color);
-  color: var(--hero-section-right-bottom-area-background-color);
-
-  @apply no-underline;
-}
-
-a.button.over-dark-background {
-  color: var(--text-color-over-dark-background);
-  border: 2px solid var(--text-color-over-dark-background);
-}
-
-a.button.over-dark-background:hover {
-  background-color: var(--text-color-over-dark-background);
-  color: var(--secondary-color);
-
-  @apply no-underline;
-}
-
-button {
-  color: var(--primary-color);
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  padding: 8px 18px;
-  transition: 0.3s ease-in-out;
-
-  @apply flex gap-2 items-center cursor-pointer
-    font-medium hover:opacity-70;
-}
-
-button.over-dark-background {
-  color: var(--text-color-over-dark-background);
-  border: 2px solid var(--text-color-over-dark-background);
-}
-
-.content-container {
-  @apply container flex justify-between items-center p-4 mx-auto;
 }
