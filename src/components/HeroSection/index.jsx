@@ -1,17 +1,23 @@
-import Header from '../Header';
+import Section from '../Section';
 import HeroCard from './HeroCard';
 import HeroContent from './HeroContent';
+import RightBottomBackgroundColorAreaComponent from './RightBottomBackgroundColorAreaComponent';
 
 import './index.css';
 
 const HeroSection = () => {
   return (
-    <section className="hero-section">
-      <Header />
-      <HeroContent />
-      <HeroCard />
-      <div className="hero-section-right-bottom-area"></div>
-    </section>
+    <Section className="hero-section">
+      <Section.Content className="hero-main-content-container">
+        <HeroContent />
+      </Section.Content>
+
+      <Section.Content className="hero-card-content-container">
+        <HeroCard />
+      </Section.Content>
+
+      <RightBottomBackgroundColorAreaComponent />
+    </Section>
   );
 };
 

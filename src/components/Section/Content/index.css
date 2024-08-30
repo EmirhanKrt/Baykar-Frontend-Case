@@ -1,0 +1,4 @@
+.content-container {
+  @apply container flex justify-between items-center px-4 mx-auto;
+  @apply z-[1];
+}

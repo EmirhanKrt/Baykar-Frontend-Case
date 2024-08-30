@@ -1,18 +1,23 @@
-import LinkButton from '../LinkButton';
-import './index.css';
+import Section from '../Section';
+import Link from '../Link';
 import HighlightedProductCard from './ProductCard';
+
+import './index.css';
 
 const HighlightedProductSection = () => {
   return (
-    <section className="highlighted-product-section">
-      <div className="highlighted-product-title-container content-container">
-        <h3>The best of the best</h3>
-        <LinkButton isOverDarkBackground={true} referTo={'/sign-up'}>
+    <Section className="highlighted-product-section">
+      <Section.Content className="highlighted-product-title-container">
+        <Section.Title className="flex-1">The best of the best</Section.Title>
+        <Link referTo={'/sign-up'} isOverDarkBackground={true} isButton={true}>
           Sign up now
-        </LinkButton>
-      </div>
-      <HighlightedProductCard />
-    </section>
+        </Link>
+      </Section.Content>
+
+      <Section.Content className="highlighted-product-card-container">
+        <HighlightedProductCard />
+      </Section.Content>
+    </Section>
   );
 };
 
