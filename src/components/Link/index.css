@@ -1,50 +1,29 @@
 a {
-  color: var(--text-color);
-  cursor: alias;
-  transition: 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  @apply text-[var(--text-color)];
+  @apply cursor-alias no-underline;
+  @apply transition ease-in-out duration-300;
+  @apply hover:underline;
 }
 
 a.button {
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  padding: 12px !important;
+  @apply text-[var(--primary-color)] leading-[24px] tracking-wide font-medium;
+  @apply cursor-pointer rounded-lg;
+  @apply flex items-center justify-center gap-4 !p-[12px];
+  @apply border-2 border-[var(--primary-color)];
 
-  @apply font-medium cursor-pointer rounded-[8px] flex items-center gap-4 justify-center;
+  @apply hover:text-[var(--hero-section-right-bottom-area-background-color)];
+  @apply hover:bg-[var(--primary-color)];
+  @apply hover:no-underline;
 }
 
 a > .link-item-text {
-  padding: 0px 16px;
-}
-
-a.button:hover {
-  background-color: var(--primary-color);
-  color: var(--hero-section-right-bottom-area-background-color);
-
-  @apply no-underline;
-}
-
-a.button:hover {
-  background-color: var(--primary-color);
-  color: var(--hero-section-right-bottom-area-background-color);
-
-  @apply no-underline;
+  @apply px-4;
 }
 
 a.button.over-dark-background {
-  color: var(--text-color-over-dark-background);
-  border: 2px solid var(--text-color-over-dark-background);
-}
+  @apply text-[var(--text-color-over-dark-background)];
+  @apply border-2 border-[var(--text-color-over-dark-background)];
 
-a.button.over-dark-background:hover {
-  background-color: var(--text-color-over-dark-background);
-  color: var(--secondary-color);
-
-  @apply no-underline;
+  @apply hover:bg-[var(--text-color-over-dark-background)];
+  @apply hover:text-[var(--secondary-color)];
 }

@@ -6,15 +6,18 @@ import './index.css';
 
 const HighlightedProductSection = () => {
   return (
-    <section className="highlighted-product-section section-container">
-      <div className="highlighted-product-title-container content-container">
+    <Section className="highlighted-product-section">
+      <Section.Content className="highlighted-product-title-container">
         <Section.Title className="flex-1">The best of the best</Section.Title>
         <Link referTo={'/sign-up'} isOverDarkBackground={true} isButton={true}>
           Sign up now
         </Link>
-      </div>
-      <HighlightedProductCard />
-    </section>
+      </Section.Content>
+
+      <Section.Content className="highlighted-product-card-container">
+        <HighlightedProductCard />
+      </Section.Content>
+    </Section>
   );
 };
 

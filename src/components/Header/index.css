@@ -1,6 +1,7 @@
 .header-section {
-  background: var(--hero-section-background-color);
-  @apply p-0 top-0 sticky z-10;
+  @apply bg-[var(--hero-section-background-color)];
+  @apply sticky top-0 z-10;
+  @apply p-0;
 }
 
 .header-section > .header-content-container {
@@ -11,8 +12,7 @@
   > .header-content-container
   > .header-logo-container
   > .header-logo-link {
-  color: var(--primary-color);
-  @apply font-bold text-[2rem] leading-[35.2px];
+  @apply text-[var(--primary-color)] font-bold text-[2rem] leading-[35.2px];
 }
 
 .header-section

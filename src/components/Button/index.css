@@ -1,13 +1,10 @@
 button {
-  color: var(--primary-color);
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  padding: 8px 18px;
-  transition: 0.3s ease-in-out;
+  @apply text-[var(--primary-color)] tracking-wide font-medium text-base;
+  @apply transition ease-in-out duration-300;
+  @apply flex items-center gap-0 px-[1.125rem] py-2;
+  @apply cursor-pointer;
 
-  @apply flex gap-0 items-center cursor-pointer
-    font-medium hover:opacity-70;
+  @apply hover:opacity-70;
 }
 
 button > .button-item-text {
@@ -15,6 +12,6 @@ button > .button-item-text {
 }
 
 button.over-dark-background {
-  color: var(--text-color-over-dark-background);
-  border: 2px solid var(--text-color-over-dark-background);
+  @apply text-[var(--text-color-over-dark-background)];
+  @apply border-2 border-[var(--text-color-over-dark-background)];
 }

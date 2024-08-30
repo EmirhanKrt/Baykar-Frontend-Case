@@ -1,14 +1,15 @@
 .hero-section {
-  background-color: var(--hero-section-background-color);
-  @apply py-0 flex flex-col gap-0 relative min-h-[100vh];
+  @apply bg-[var(--hero-section-background-color)];
+  @apply relative min-h-[100vh];
+  @apply flex flex-col py-0 gap-0;
 }
 
 .hero-section > .hero-main-content-container {
-  @apply flex-col flex flex-1 gap-8 py-12 items-center md:flex-row md:py-20;
+  @apply flex flex-col flex-1 gap-8 py-12 items-center md:flex-row md:py-20;
 }
 
 .hero-section > .hero-main-content-container > .hero-content-text-container {
-  @apply justify-center items-center flex flex-col gap-8 md:justify-normal md:items-start;
+  @apply flex flex-col justify-center items-center gap-8 md:justify-normal md:items-start;
 }
 
 .hero-section
@@ -70,10 +71,9 @@
 }
 
 .hero-section > .hero-section-right-bottom-area {
-  background-color: var(--hero-section-right-bottom-area-background-color);
   clip-path: polygon(2% 100%, 100% 100%, 100% 21%);
 
-  border-bottom: 1px solid var(--border-color);
+  @apply bg-[var(--hero-section-right-bottom-area-background-color)] border-b border-[var(--section-border-color)];
   @apply absolute bottom-0 right-0 w-full h-full;
 }
 

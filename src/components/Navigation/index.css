@@ -7,11 +7,8 @@
 }
 
 .navigation > .navigation-item {
-  color: var(--primary-color);
-  @apply font-medium;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  padding: 12px 8px;
+  @apply text-[var(--primary-color)] font-medium leading-[24px] tracking-wide;
+  @apply px-2 py-3;
 }
 
 .navigation > .navigation-item:not(.button) > .link-item-text {
@@ -19,7 +16,7 @@
 }
 
 .navigation > .navigation-item.button:hover {
-  background-color: var(--primary-color);
-  color: var(--hero-section-right-bottom-area-background-color);
+  @apply bg-[var(--primary-color)];
+  @apply text-[var(--hero-section-right-bottom-area-background-color)];
   @apply no-underline;
 }

@@ -26,9 +26,9 @@ const BasketIconSvg = (
   </svg>
 );
 
-const BackgroundRectangle = ({ src, alt, style }) => {
+const BackgroundRectangle = ({ src, alt, className }) => {
   return (
-    <div className="absolute" style={style} key={alt}>
+    <div className={`absolute z-[-1] ${className}`} key={alt}>
       <img src={src} alt={alt} />
     </div>
   );
@@ -38,53 +38,40 @@ const backgroundRectangles = [
   {
     src: BackgroundRectangleRed,
     alt: 'Red Background Rectangle Image',
-    style: {
-      left: -10,
-      top: '30%'
-    }
+    className: 'left-[21px] bottom-[-33px] lg:left-[-35px] lg:bottom-[25px]'
   },
   {
     src: BackgroundRectangleBlue,
     alt: 'Blue Background Rectangle Image',
-    style: {
-      left: 'calc(33%)',
-      top: '-10px'
-    }
+    className: 'right-[-16px] top-[140px] lg:left-[-20px] lg:top-[-31px]'
   },
   {
     src: BackgroundRectangleOrange,
     alt: 'Orange Background Rectangle Image',
-    style: {
-      left: 'calc(56%)',
-      top: '60%'
-    }
+    className: 'left-[38px] bottom-[13px] lg:right-[-14px] lg:bottom-[48px]'
   },
   {
     src: BackgroundRectangleGreen,
     alt: 'Green Background Rectangle Image',
-    style: {
-      right: '-2%',
-      top: '10%'
-    }
+    className: 'right-[32px] top-[135px] lg:right-[-43px] lg:top-[33px]'
   },
   {
     src: BackgroundRectanglePurple,
     alt: 'Purple Background Rectangle Image',
-    style: {
-      right: '6%',
-      top: '60%'
-    }
+    className: 'left-[-16px] top-[54px] lg:right-[96px] lg:bottom-[-24px]'
   }
 ];
 
-const Card = ({ src, title, slug, description }) => {
+const Card = ({ src, title, slug, description, backgroundRectangles }) => {
   return (
     <div className="highlighted-product-card" key={slug}>
-      <img
-        src={src}
-        alt={`${title} Image`}
-        className="h-[220px] object-cover"
-      />
+      <div className="highlighted-product-card-image-container">
+        <img
+          src={src}
+          alt={`${title} Image`}
+          className="highlighted-product-card-image"
+        />
+      </div>
       <div className="highlighted-product-card-text-content-container">
         <Section.SubTitle>{title}</Section.SubTitle>
         <Section.Description>{description}</Section.Description>
@@ -99,6 +86,8 @@ const Card = ({ src, title, slug, description }) => {
           Buy Now
         </Link>
       </div>
+
+      {backgroundRectangles.map(BackgroundRectangle)}
     </div>
   );
 };
@@ -109,32 +98,29 @@ const products = [
     title: 'Title 1',
     slug: 'product-1',
     description:
-      'Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.'
+      'Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.',
+    backgroundRectangles: [backgroundRectangles[0]]
   },
   {
     src: Product2Image,
     title: 'Title 2',
     slug: 'product-2',
     description:
-      'Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.'
+      'Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.',
+    backgroundRectangles: [backgroundRectangles[1], backgroundRectangles[2]]
   },
   {
     src: Product3Image,
     title: 'Title 3',
     slug: 'product-3',
     description:
-      'Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.'
+      'Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.',
+    backgroundRectangles: [backgroundRectangles[3], backgroundRectangles[4]]
   }
 ];
 
 const HighlightedProductCard = () => {
-  return (
-    <div className="highlighted-product-card-container content-container">
-      {products.map(Card)}
-
-      {backgroundRectangles.map(BackgroundRectangle)}
-    </div>
-  );
+  return products.map(Card);
 };
 
 export default HighlightedProductCard;

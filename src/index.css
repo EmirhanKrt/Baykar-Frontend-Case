@@ -22,7 +22,8 @@
   --why-join-us-section-background-color: #ffffff;
   --footer-background-color: var(--secondary-color);
 
-  --border-color: #e2e8f0;
+  --section-border-color: #e2e8f0;
+  --highlighted-product-card-border-color: var(--secondary-color);
 }
 
 html {
