@@ -1,8 +1,14 @@
 import Navigation from '../Navigation';
 
-const HeaderNavigationItems = ({ target, displayText, isButton }) => (
+const HeaderNavigationItems = ({
+  referTo,
+  displayText,
+  isButton = false,
+  target = '_top'
+}) => (
   <Navigation.Item
     key={target}
+    referTo={referTo}
     target={target}
     displayText={displayText}
     isButton={isButton}
@@ -11,27 +17,27 @@ const HeaderNavigationItems = ({ target, displayText, isButton }) => (
 
 const navigationItems = [
   {
-    target: 'products',
+    referTo: 'products',
     displayText: 'Products'
   },
   {
-    target: 'solutions',
+    referTo: 'solutions',
     displayText: 'Solutions'
   },
   {
-    target: 'pricing',
+    referTo: 'pricing',
     displayText: 'Pricing'
   },
   {
-    target: 'resources',
+    referTo: 'resources',
     displayText: 'Resources'
   },
   {
-    target: 'log-in',
+    referTo: 'log-in',
     displayText: 'Log In'
   },
   {
-    target: 'sign-up',
+    referTo: 'sign-up',
     displayText: 'Sign up now',
     isButton: true
   }

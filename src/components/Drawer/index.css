@@ -12,7 +12,7 @@
   flex-direction: column;
   padding: 1rem;
 
-  background-color: var(--hero-section-right-bottom-area-background-color);
+  background-color: var(--hero-section-background-color);
   width: 300px;
   flex-shrink: 0;
 

@@ -22,7 +22,7 @@ const Header = () => {
     <header className="header content-container">
       <div className="header-logo-container">
         <a href="/" className="header-logo">
-          Collers
+          <h1>Collers</h1>
         </a>
       </div>
 

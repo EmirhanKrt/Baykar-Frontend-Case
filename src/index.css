@@ -33,6 +33,7 @@ body {
   font-family: 'Roboto', system-ui;
   font-optical-sizing: auto;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 a {
@@ -63,6 +64,25 @@ a.button:hover {
   @apply no-underline;
 }
 
+a.button:hover {
+  background-color: var(--primary-color);
+  color: var(--hero-section-right-bottom-area-background-color);
+
+  @apply no-underline;
+}
+
+a.button.over-dark-background {
+  color: var(--text-color-over-dark-background);
+  border: 2px solid var(--text-color-over-dark-background);
+}
+
+a.button.over-dark-background:hover {
+  background-color: var(--text-color-over-dark-background);
+  color: var(--secondary-color);
+
+  @apply no-underline;
+}
+
 button {
   color: var(--primary-color);
   font-size: 16px;
@@ -73,6 +93,11 @@ button {
 
   @apply flex gap-2 items-center cursor-pointer
     font-medium hover:opacity-70;
+}
+
+button.over-dark-background {
+  color: var(--text-color-over-dark-background);
+  border: 2px solid var(--text-color-over-dark-background);
 }
 
 .content-container {
