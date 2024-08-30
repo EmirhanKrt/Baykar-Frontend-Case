@@ -23,11 +23,17 @@
   --border-color: #e2e8f0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-color);
+  background-image: var(--background-color);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--text-color);
   font-size: 16px;
   font-family: 'Roboto', system-ui;

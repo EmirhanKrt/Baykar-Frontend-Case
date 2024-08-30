@@ -7,7 +7,7 @@ const HeaderNavigationItems = ({
   target = '_top'
 }) => (
   <Navigation.Item
-    key={target}
+    key={referTo}
     referTo={referTo}
     target={target}
     displayText={displayText}
