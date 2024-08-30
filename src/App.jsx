@@ -2,6 +2,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import HighlightedProductSection from './components/HighlightedProductSection';
 import WhyJoinUsSection from './components/WhyJoinUsSection';
+import ScrollListener from './utils/ScrollListener';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <HeroSection />
       <HighlightedProductSection />
       <WhyJoinUsSection />
+      <ScrollListener />
     </>
   );
 };

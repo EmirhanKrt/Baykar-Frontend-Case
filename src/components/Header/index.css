@@ -2,6 +2,8 @@
   @apply bg-[var(--hero-section-background-color)];
   @apply sticky top-0 z-10;
   @apply p-0;
+
+  box-shadow: var(--header-box-shadow);
 }
 
 .header-section > .header-content-container {
