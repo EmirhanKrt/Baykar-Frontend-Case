@@ -1,5 +1,6 @@
 import PlayButtonIcon from '../../assets/play-button-icon.svg';
 import HeroSectionImage from '../../assets/hero-section-image.png';
+import LinkButton from '../LinkButton';
 
 const HeroContent = () => {
   return (
@@ -12,9 +13,7 @@ const HeroContent = () => {
           amet.
         </p>
         <div className="hero-content-button-group-container">
-          <a className="button" href="/sign-up">
-            Sign up now
-          </a>
+          <LinkButton referTo={'/sign-up'}>Sign up now</LinkButton>
           <button>
             <img src={PlayButtonIcon} alt="Play Button Icon" className="" />
             <span> Watch Demo</span>
@@ -25,7 +24,7 @@ const HeroContent = () => {
         <img
           src={HeroSectionImage}
           alt="Hero Section Image"
-          className="max-w-[361px] xl:max-w-[486px]"
+          className="max-w-[300px] xl:max-w-[486px]"
         />
       </div>
     </div>
