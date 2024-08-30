@@ -1,5 +1,5 @@
 .navigation {
-  @apply flex items-center gap-2;
+  @apply flex items-center lg:gap-4 gap-2;
 }
 
 .navigation.mobile {
@@ -11,11 +11,15 @@
   @apply font-medium;
   line-height: 24px;
   letter-spacing: 0.5px;
-  padding: 8px;
+  padding: 12px 8px;
+}
+
+.navigation > .navigation-item:not(.button) > .link-item-text {
+  @apply p-0;
 }
 
 .navigation > .navigation-item.button:hover {
-  @apply no-underline;
   background-color: var(--primary-color);
   color: var(--hero-section-right-bottom-area-background-color);
+  @apply no-underline;
 }

@@ -3,9 +3,11 @@ import useWindowSize from '../../hooks/useWindowSize';
 
 import HeaderNavigation from './HeaderNavigation';
 import Drawer from '../Drawer';
+import Button from '../Button';
 
 import HamburgerMenuIcon from '../../assets/hamburger-menu-logo.svg';
 import './index.css';
+import Link from '../Link';
 
 const Header = () => {
   const { width } = useWindowSize();
@@ -21,9 +23,9 @@ const Header = () => {
   return (
     <header className="header content-container">
       <div className="header-logo-container">
-        <a href="/" className="header-logo">
-          <h1>Collers</h1>
-        </a>
+        <Link className="header-logo" referTo={'/'}>
+          <h1 style={{ all: 'unset' }}>Collers</h1>
+        </Link>
       </div>
 
       <div className="header-navigation-container">
@@ -33,9 +35,9 @@ const Header = () => {
               className="header-hamburger-menu-container"
               onClick={handleOpen}
             >
-              <button className="header-hamburger-menu">
+              <Button className="header-hamburger-menu">
                 <img src={HamburgerMenuIcon} alt="Menu" />
-              </button>
+              </Button>
             </div>
 
             <Drawer open={open} onClose={handleClose}>

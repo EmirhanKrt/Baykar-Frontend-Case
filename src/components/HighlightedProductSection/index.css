@@ -1,19 +1,28 @@
 .highlighted-product-section {
-  background-color: var(--secondary-color);
+  background-color: var(--highlighted-product-section-background-color);
   color: var(--text-color-over-dark-background);
-  @apply py-4 gap-0 flex flex-col md:py-8 md:gap-8 overflow-x-hidden;
+  border: 1px solid var(--border-color);
+  border-right: 0;
+  border-left: 0;
+  @apply flex flex-col overflow-x-hidden gap-8 md:gap-20;
 }
 
 .highlighted-product-section > .highlighted-product-title-container {
-  @apply flex-col flex gap-4 md:flex-row;
+  @apply flex-col flex py-0 gap-8 md:flex-row md:gap-20;
 }
 
-.highlighted-product-section > .highlighted-product-title-container > h3 {
-  @apply flex-1 font-bold text-[1.5rem] leading-[35.2px] md:text-[2rem] md:leading-[61.6px];
+.highlighted-product-section > .highlighted-product-title-container > a.button {
+  @apply !py-[1.125rem] !px-6;
+}
+.highlighted-product-section
+  > .highlighted-product-title-container
+  > a.button
+  > .link-item-text {
+  @apply !px-6 text-[1.5rem] leading-[1.5rem];
 }
 
 .highlighted-product-section > .highlighted-product-card-container {
-  @apply flex-col flex relative gap-4 md:flex-row md:gap-12;
+  @apply flex-col flex relative gap-8 py-0 md:flex-row md:gap-12;
 }
 
 .highlighted-product-section
@@ -23,32 +32,35 @@
   background: var(--secondary-color);
   box-shadow: 0px 25px 50px -12px #ffffff40;
 
-  @apply flex flex-col rounded-lg overflow-hidden;
+  @apply flex flex-col rounded-lg overflow-hidden w-[22.625rem] md:w-auto;
 }
 
 .highlighted-product-section
   > .highlighted-product-card-container
   > .highlighted-product-card
-  > .highlighted-product-card-content-container {
-  @apply flex flex-col p-8 gap-8;
-}
-
-.highlighted-product-section
-  > .highlighted-product-card-container
-  > .highlighted-product-card
-  > .highlighted-product-card-content-container
   > .highlighted-product-card-text-content-container {
-  @apply flex flex-col gap-4;
+  @apply flex flex-col gap-4 p-8 pb-0;
 }
 
 .highlighted-product-section
   > .highlighted-product-card-container
   > .highlighted-product-card
-  > .highlighted-product-card-content-container
   > .highlighted-product-card-text-content-container
-  > h3 {
-  font-size: 20px;
-  line-height: 26.4px;
+  > h4 {
+  @apply leading-[26.4px];
+}
 
-  @apply font-bold;
+.highlighted-product-section
+  > .highlighted-product-card-container
+  > .highlighted-product-card
+  > .highlighted-product-card-button-container {
+  @apply p-8;
+}
+
+.highlighted-product-section
+  > .highlighted-product-card-container
+  > .highlighted-product-card
+  > .highlighted-product-card-button-container
+  > a.button {
+  padding: 0.875rem !important;
 }

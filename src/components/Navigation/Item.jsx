@@ -1,18 +1,16 @@
-import LinkButton from '../LinkButton';
+import Link from '../Link';
 import './index.css';
 
 const Item = ({ referTo, displayText, isButton = false, target = '_top' }) => {
-  if (isButton)
-    return (
-      <LinkButton className="navigation-item" referTo={referTo} target={target}>
-        {displayText}
-      </LinkButton>
-    );
-
   return (
-    <a target={target} href={referTo} className={'navigation-item'}>
+    <Link
+      target={target}
+      className="navigation-item"
+      referTo={referTo}
+      isButton={isButton}
+    >
       {displayText}
-    </a>
+    </Link>
   );
 };
 

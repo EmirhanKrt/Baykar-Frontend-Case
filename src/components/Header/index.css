@@ -1,3 +1,7 @@
+.header {
+  @apply p-4;
+}
+
 .header > .header-logo-container > .header-logo {
   font-size: 2rem;
   @apply font-bold;
@@ -11,4 +15,11 @@
 
 .header > .header-navigation-container > .header-hamburger-menu-container {
   @apply flex;
+}
+
+.header
+  > .header-navigation-container
+  > .header-hamburger-menu-container
+  > .header-hamburger-menu {
+  @apply p-0;
 }

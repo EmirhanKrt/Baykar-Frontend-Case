@@ -1,0 +1,20 @@
+button {
+  color: var(--primary-color);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  padding: 8px 18px;
+  transition: 0.3s ease-in-out;
+
+  @apply flex gap-0 items-center cursor-pointer
+    font-medium hover:opacity-70;
+}
+
+button > .button-item-text {
+  @apply py-0 px-2;
+}
+
+button.over-dark-background {
+  color: var(--text-color-over-dark-background);
+  border: 2px solid var(--text-color-over-dark-background);
+}

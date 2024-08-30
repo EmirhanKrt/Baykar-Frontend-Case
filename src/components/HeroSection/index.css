@@ -1,5 +1,5 @@
 .hero-section {
-  @apply flex flex-col gap-4;
+  @apply flex flex-col;
   position: relative;
   min-height: 100vh;
   background-color: var(--hero-section-background-color);
@@ -7,7 +7,7 @@
 }
 
 .hero-section > .hero-content-container {
-  @apply flex-col flex flex-1 gap-4 items-center md:flex-row;
+  @apply flex-col flex flex-1 gap-8 items-center md:flex-row;
 }
 
 .hero-section > .hero-content-container > .hero-content-text-container {
@@ -30,20 +30,13 @@
 .hero-section
   > .hero-content-container
   > .hero-content-text-container
-  > .hero-content-text {
-  font-size: 1rem;
-  @apply font-normal md:text-[1.25rem];
-}
-
-.hero-section
-  > .hero-content-container
-  > .hero-content-text-container
   > .hero-content-button-group-container {
   @apply flex gap-4;
 }
 
 .hero-section > .hero-section-card {
-  @apply flex-col gap-8 pb-20 md:flex-row md:gap-20;
+  border-bottom: 1px solid var(--border-color);
+  @apply flex-col gap-8 md:gap-20 md:flex-row;
 }
 
 .hero-section > .hero-section-right-bottom-area {

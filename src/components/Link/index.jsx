@@ -1,11 +1,18 @@
-const LinkButton = ({
+import './index.css';
+
+const Link = ({
   referTo,
   target = '_top',
   className = '',
   isOverDarkBackground = false,
+  leftIcon = null,
+  rightIcon = null,
+  isButton = false,
   children
 }) => {
-  let classNameProperty = 'button';
+  let classNameProperty = '';
+
+  if (isButton) classNameProperty = 'button';
 
   if (isOverDarkBackground) classNameProperty += ' over-dark-background';
 
@@ -13,9 +20,11 @@ const LinkButton = ({
 
   return (
     <a className={classNameProperty} href={referTo} target={target}>
-      {children}
+      {leftIcon}
+      <div className="link-item-text">{children}</div>
+      {rightIcon}
     </a>
   );
 };
 
-export default LinkButton;
+export default Link;

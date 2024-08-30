@@ -8,7 +8,7 @@ import PurpleCircleIcon from '../../assets/purple-circle-icon.svg';
 const Card = ({ src, subIconSrc, title, description }) => {
   return (
     <div
-      className="items-center flex flex-col gap-4 md:items-start"
+      className="items-center flex flex-col gap-[10px] md:items-start"
       key={title}
     >
       <div className="relative">
@@ -19,7 +19,7 @@ const Card = ({ src, subIconSrc, title, description }) => {
           className="absolute left-8 top-0"
         />
       </div>
-      <h3 className="font-medium">{title}</h3>
+      <h4 className="font-medium">{title}</h4>
       <p className="font-normal text-center md:text-start">{description}</p>
     </div>
   );
@@ -51,7 +51,7 @@ const cardDetails = [
 
 const HeroCard = () => {
   return (
-    <div className="hero-section-card content-container">
+    <div className="hero-section-card section-container content-container">
       {cardDetails.map(Card)}
     </div>
   );
