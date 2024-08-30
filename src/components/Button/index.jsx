@@ -1,3 +1,4 @@
+import { amplifyClassnamePropWithStaticClassname } from '../../utils';
 import './index.css';
 
 const Button = ({
@@ -14,7 +15,10 @@ const Button = ({
 
   if (isOverDarkBackground) classNameProperty += ' over-dark-background';
 
-  if (className !== '') classNameProperty += className;
+  classNameProperty = amplifyClassnamePropWithStaticClassname(
+    classNameProperty,
+    className
+  );
 
   return (
     <button className={classNameProperty} onClick={onClick}>

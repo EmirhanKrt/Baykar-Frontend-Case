@@ -1,3 +1,6 @@
+import Section from '../Section';
+import Link from '../Link';
+
 import Product1Image from '../../assets/product-1.png';
 import Product2Image from '../../assets/product-2.png';
 import Product3Image from '../../assets/product-3.png';
@@ -7,7 +10,6 @@ import BackgroundRectangleGreen from '../../assets/highlighted-product-backgroun
 import BackgroundRectangleOrange from '../../assets/highlighted-product-background-rectangle-orange.png';
 import BackgroundRectanglePurple from '../../assets/highlighted-product-background-rectangle-purple.png';
 import BackgroundRectangleRed from '../../assets/highlighted-product-background-rectangle-red.png';
-import Link from '../Link';
 
 const BasketIconSvg = (
   <svg
@@ -84,8 +86,8 @@ const Card = ({ src, title, slug, description }) => {
         className="h-[220px] object-cover"
       />
       <div className="highlighted-product-card-text-content-container">
-        <h4>{title}</h4>
-        <p>{description}</p>
+        <Section.SubTitle>{title}</Section.SubTitle>
+        <Section.Description>{description}</Section.Description>
       </div>
       <div className="highlighted-product-card-button-container">
         <Link

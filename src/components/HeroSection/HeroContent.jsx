@@ -1,6 +1,8 @@
-import HeroSectionImage from '../../assets/hero-section-image.png';
+import Section from '../Section';
 import Button from '../Button';
 import Link from '../Link';
+
+import HeroSectionImage from '../../assets/hero-section-image.png';
 
 const PlayButtonIcon = (
   <svg
@@ -22,11 +24,11 @@ const HeroContent = () => {
     <div className="hero-content-container section-container content-container">
       <div className="hero-content-text-container">
         <h2 className="hero-content-title">Collectible Sneakers</h2>
-        <p className="hero-content-text">
+        <Section.Description className="hero-content-text">
           Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
           suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices
           amet.
-        </p>
+        </Section.Description>
         <div className="hero-content-button-group-container">
           <Link referTo={'/sign-up'} isButton={true}>
             Sign up now

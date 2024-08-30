@@ -1,6 +1,9 @@
+import Section from '../Section';
+
 import ThropyIcon from '../../assets/thropy-icon.svg';
 import TunnelIcon from '../../assets/tunnel-icon.svg';
 import TvIcon from '../../assets/tv-icon.svg';
+
 import BlueTriangleIcon from '../../assets/blue-triangle-icon.svg';
 import GreenTriangleIcon from '../../assets/green-triangle-icon.svg';
 import PurpleCircleIcon from '../../assets/purple-circle-icon.svg';
@@ -19,8 +22,10 @@ const Card = ({ src, subIconSrc, title, description }) => {
           className="absolute left-8 top-0"
         />
       </div>
-      <h4 className="font-medium">{title}</h4>
-      <p className="font-normal text-center md:text-start">{description}</p>
+      <Section.SubTitle>{title}</Section.SubTitle>
+      <Section.Description className="font-normal text-center md:text-start">
+        {description}
+      </Section.Description>
     </div>
   );
 };

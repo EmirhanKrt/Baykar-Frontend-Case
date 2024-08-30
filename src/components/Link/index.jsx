@@ -1,3 +1,4 @@
+import { amplifyClassnamePropWithStaticClassname } from '../../utils';
 import './index.css';
 
 const Link = ({
@@ -16,7 +17,10 @@ const Link = ({
 
   if (isOverDarkBackground) classNameProperty += ' over-dark-background';
 
-  if (className !== '') classNameProperty += ` ${className}`;
+  classNameProperty = amplifyClassnamePropWithStaticClassname(
+    classNameProperty,
+    className
+  );
 
   return (
     <a className={classNameProperty} href={referTo} target={target}>

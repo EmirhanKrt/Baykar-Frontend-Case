@@ -3,17 +3,17 @@ import Item from './Item';
 
 import './index.css';
 
-const Navigation = ({ children, className = '' }) => {
-  let classNameProperty = 'navigation';
+const UnorderedList = ({ className = '', children }) => {
+  let classNameProperty = 'unordered-list';
 
   classNameProperty = amplifyClassnamePropWithStaticClassname(
     classNameProperty,
     className
   );
 
-  return <nav className={classNameProperty}>{children}</nav>;
+  return <ul className={classNameProperty}>{children}</ul>;
 };
 
-export default Navigation;
+export default UnorderedList;
 
-Navigation.Item = Item;
+UnorderedList.Item = Item;
