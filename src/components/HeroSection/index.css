@@ -5,7 +5,7 @@
 }
 
 .hero-section > .hero-main-content-container {
-  @apply flex flex-col flex-1 gap-8 py-12 items-center md:flex-row md:py-20;
+  @apply flex flex-col flex-1 gap-8 items-center md:flex-row;
 }
 
 .hero-section > .hero-main-content-container > .hero-content-text-container {
@@ -34,7 +34,7 @@
 }
 
 .hero-section > .hero-card-content-container {
-  @apply flex-col gap-8 py-12 md:py-20 md:gap-20 md:flex-row;
+  @apply flex-col gap-8 md:gap-20 md:flex-row;
 }
 
 .hero-section > .hero-card-content-container > .hero-card-item {

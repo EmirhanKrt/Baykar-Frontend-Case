@@ -1,0 +1,166 @@
+.customer-carousel-section {
+  @apply relative;
+}
+
+.customer-carousel-section
+  > .customer-carousel-title-content-container
+  > .customer-carousel-title-container {
+  @apply flex gap-20 w-full;
+}
+
+.customer-carousel-section
+  > .customer-carousel-title-content-container
+  > .customer-carousel-title-container
+  > .customer-carousel-title-button-container {
+  @apply hidden items-center gap-6 lg:flex;
+}
+
+.customer-carousel-section
+  > .customer-carousel-title-content-container
+  > .customer-carousel-title-container
+  > .customer-carousel-title-button-container
+  > .customer-carousel-title-button {
+  @apply w-fit border-2 border-[var(--primary-color)] p-[10px] h-12 rounded-full;
+
+  @apply hover:text-[var(--hero-section-right-bottom-area-background-color)];
+  @apply hover:bg-[var(--primary-color)];
+}
+
+.customer-carousel-section > .customer-carousel-card-content-container {
+  @apply max-w-none px-0 py-0 relative;
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container {
+  @apply relative overflow-x-scroll z-[1];
+
+  @apply flex gap-6 pb-4 px-4 lg:px-0;
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card {
+  @apply min-w-[319px] h-[298px] lg:min-w-[384px] lg:h-[432px];
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card.not-empty {
+  box-shadow: 0px 0px 6px 0px #00000012, 0px 10px 15px -3px #0000001a;
+
+  @apply flex flex-col p-6 gap-2 lg:p-8 lg:gap-4 rounded-[20px] bg-white border border-[var(--section-border-color)];
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card.not-empty
+  > .customer-carousel-slider-card-logo-container {
+  @apply flex flex-col justify-center py-4 h-16;
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card.not-empty
+  > .customer-carousel-slider-card-logo-container
+  > img {
+  @apply h-8 w-fit;
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card.not-empty
+  > .customer-carousel-slider-card-description {
+  @apply text-[16px] leading-[22.4px] lg:text-[24px] lg:leading-[38.4px];
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card.not-empty
+  > .customer-carousel-slider-card-customer-container {
+  @apply flex gap-4 pt-4 h-20;
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card.not-empty
+  > .customer-carousel-slider-card-customer-container
+  > .customer-carousel-slider-card-customer-avatar {
+  @apply w-16 h-16 rounded-full object-cover;
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card.not-empty
+  > .customer-carousel-slider-card-customer-container
+  > .customer-carousel-slider-card-customer-detailes-container {
+  @apply flex flex-col justify-center flex-grow;
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card.not-empty
+  > .customer-carousel-slider-card-customer-container
+  > .customer-carousel-slider-card-customer-detailes-container
+  > .customer-carousel-slider-card-customer-name {
+  @apply text-[#000000] text-[1.125rem] leading-[28.8px];
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-card-slider-container
+  > .customer-carousel-slider-card.not-empty
+  > .customer-carousel-slider-card-customer-container
+  > .customer-carousel-slider-card-customer-detailes-container
+  > .customer-carousel-slider-card-customer-position {
+  @apply text-[#475569] text-[1rem] leading-[22.4px];
+}
+
+.customer-carousel-section
+  > .customer-carousel-card-content-container
+  > .customer-carousel-background-color {
+  width: 100%;
+  transform: translateX(-50%);
+
+  @apply absolute z-0;
+
+  @apply bg-[#FDE68A] h-[277px] left-[50%] -top-4 lg:h-[421px] lg:-top-[40px];
+}
+
+@media (min-width: 1024px) {
+  .customer-carousel-section
+    > .customer-carousel-card-content-container
+    > .customer-carousel-background-color {
+    max-width: 1024px;
+    width: calc(100% - 24px - 24px);
+  }
+}
+@media (min-width: 1280px) {
+  .customer-carousel-section
+    > .customer-carousel-card-content-container
+    > .customer-carousel-background-color {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .customer-carousel-section
+    > .customer-carousel-card-content-container
+    > .customer-carousel-background-color {
+    max-width: 1536px;
+  }
+}

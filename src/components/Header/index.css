@@ -7,7 +7,7 @@
 }
 
 .header-section > .header-content-container {
-  @apply p-4 md:p-[1.375rem];
+  @apply p-4 md:py-[1.375rem];
 }
 
 .header-section

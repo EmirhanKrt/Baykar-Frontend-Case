@@ -1,4 +1,4 @@
 .content-container {
-  @apply container flex justify-between items-center px-4 mx-auto;
+  @apply container flex justify-between items-center px-4 mx-auto py-12 md:py-20;
   @apply z-[1];
 }
