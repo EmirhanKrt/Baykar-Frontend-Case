@@ -1,0 +1,111 @@
+.grow-your-collection-section {
+  @apply relative;
+}
+
+.grow-your-collection-section > .grow-your-collection-content-container {
+  @apply pb-8 lg:pb-20;
+}
+
+.grow-your-collection-unordered-list-and-tab-container {
+  @apply flex flex-col max-w-none px-4 py-0 gap-4 lg:pb-32 lg:gap-20 lg:flex-row lg:container;
+}
+
+.grow-your-collection-unordered-list-and-tab-container
+  > .grow-your-collection-tab-container {
+  filter: drop-shadow(0px 0px 15px #00000012)
+    drop-shadow(0px 25px 50px #00000040);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.grow-your-collection-unordered-list-and-tab-container
+  > .grow-your-collection-tab-container.active {
+  animation: fadeUp 0.5s forwards;
+}
+
+.grow-your-collection-unordered-list-and-tab-container
+  > .grow-your-collection-tab-container.inactive {
+  animation: fadeDown 0.5s forwards;
+}
+
+.grow-your-collection-unordered-list-and-tab-container > .unordered-list {
+  @apply gap-4 w-full flex-row overflow-x-scroll lg:flex-col lg:overflow-x-hidden lg:w-fit;
+}
+
+.grow-your-collection-unordered-list-and-tab-container > .unordered-list {
+  @apply pb-4 lg:pb-0;
+}
+
+.grow-your-collection-unordered-list-and-tab-container
+  > .unordered-list::-webkit-scrollbar {
+  display: none;
+}
+
+.grow-your-collection-unordered-list-and-tab-container
+  > .unordered-list
+  > .unordered-list-item {
+  @apply rounded-lg p-4 ease-in-out transition-[300] cursor-pointer gap-0 min-w-[265px];
+}
+
+.grow-your-collection-unordered-list-and-tab-container
+  > .unordered-list
+  > .unordered-list-item.active,
+.grow-your-collection-unordered-list-and-tab-container
+  > .unordered-list
+  > .unordered-list-item:hover {
+  box-shadow: 0px 0px 4px 0px #00000012, 0px 4px 6px -1px #0000001a;
+
+  @apply bg-white;
+}
+
+.grow-your-collection-unordered-list-and-tab-container
+  > .unordered-list
+  > .unordered-list-item
+  > .unordered-list-item-icon-container {
+  @apply h-6;
+}
+
+.grow-your-collection-unordered-list-and-tab-container
+  > .unordered-list
+  > .unordered-list-item
+  > .unordered-list-item-text {
+  letter-spacing: 0.5px;
+
+  @apply px-4;
+
+  @apply text-[1.25rem] font-medium leading-[1.5rem];
+}
+
+.grow-your-collection-section
+  > .grow-your-collection-background-layer-image-container {
+  @apply relative h-24 lg:h-32;
+}
+
+.grow-your-collection-section
+  > .grow-your-collection-background-layer-image-container
+  > svg {
+  @apply absolute bottom-0 left-0 w-full -z-[1];
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
