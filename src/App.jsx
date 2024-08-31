@@ -13,6 +13,7 @@ const App = () => {
       <HighlightedProductSection />
       <WhyJoinUsSection />
       <CustomerCarouselSection />
+      <div className="h-20">sdgpokdsfkogsdkofg</div>
       <ScrollListener />
     </>
   );

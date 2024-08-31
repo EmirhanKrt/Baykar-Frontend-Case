@@ -1,5 +1,7 @@
 .why-join-us-section > .why-join-us-content-container {
-  @apply w-full pb-14 pt-4 xl:py-40;
+  @apply w-full pb-14 pt-4 md:py-40;
+
+  @apply overflow-x-hidden xl:overflow-x-visible;
 }
 
 .why-join-us-section > .why-join-us-content-container > .why-join-us-container {

@@ -38,27 +38,32 @@ const backgroundRectangles = [
   {
     src: BackgroundRectangleRed,
     alt: 'Red Background Rectangle Image',
-    className: 'left-[21px] bottom-[-33px] lg:left-[-35px] lg:bottom-[25px]'
+    className:
+      'w-[202px] h-[202px] left-[21px] bottom-[-33px] lg:w-[271px] lg:h-[271px] lg:left-[-35px] lg:bottom-[25px]'
   },
   {
     src: BackgroundRectangleBlue,
     alt: 'Blue Background Rectangle Image',
-    className: 'right-[-16px] top-[140px] lg:left-[-20px] lg:top-[-31px]'
+    className:
+      'w-[120px] h-[120px] right-[-16px] top-[140px] lg:w-[161px] lg:h-[161px] lg:left-[-20px] lg:top-[-31px]'
   },
   {
     src: BackgroundRectangleOrange,
     alt: 'Orange Background Rectangle Image',
-    className: 'left-[38px] bottom-[13px] lg:right-[-14px] lg:bottom-[48px]'
+    className:
+      'w-[97px] h-[97px] left-[38px] bottom-[13px] lg:w-[130px] lg:h-[130px] lg:right-[-14px] lg:bottom-[48px] lg:left-auto'
   },
   {
     src: BackgroundRectangleGreen,
     alt: 'Green Background Rectangle Image',
-    className: 'right-[32px] top-[135px] lg:right-[-43px] lg:top-[33px]'
+    className:
+      'w-[173px] h-[173px] right-[32px] top-[135px] lg:w-[232px] lg:h-[232px] lg:right-[-43px] lg:top-[33px]'
   },
   {
     src: BackgroundRectanglePurple,
     alt: 'Purple Background Rectangle Image',
-    className: 'left-[-16px] top-[54px] lg:right-[96px] lg:bottom-[-24px]'
+    className:
+      'w-[151px] h-[151px] left-[-16px] top-[54px] lg:w-[202px] lg:h-[202px] lg:left-[96px] lg:bottom-[-24px] lg:top-auto'
   }
 ];
 

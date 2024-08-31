@@ -23,7 +23,7 @@ const Button = ({
   return (
     <button className={classNameProperty} onClick={onClick}>
       {leftIcon}
-      <div className="button-item-text">{children}</div>
+      {children && <div className="button-item-text">{children}</div>}
       {rightIcon}
     </button>
   );
