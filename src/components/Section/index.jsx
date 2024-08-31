@@ -2,9 +2,11 @@ import React from 'react';
 import Description from './Description';
 import SubTitle from './SubTitle';
 import Title from './Title';
+import Content from './Content';
 
 import { amplifyClassnamePropWithStaticClassname } from '../../utils';
-import Content from './Content';
+
+import './index.css';
 
 const Section = ({ className = '', children }) => {
   const classNameProperty = amplifyClassnamePropWithStaticClassname(

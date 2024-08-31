@@ -1,5 +1,5 @@
 .why-join-us-section > .why-join-us-content-container {
-  @apply px-4 py-12 w-full md:py-40;
+  @apply px-4 py-12 w-full xl:py-40;
 }
 
 .why-join-us-section > .why-join-us-content-container > .why-join-us-container {
@@ -7,7 +7,7 @@
 
   @apply bg-[var(--why-join-us-section-background-color)];
 
-  @apply flex flex-col py-8 px-4 gap-8 md:p-20 md:gap-20 md:flex-row;
+  @apply flex flex-col py-8 px-4 gap-8 xl:p-20 xl:gap-20 xl:flex-row xl:items-center;
 
   @apply rounded-[30px] w-full;
 }
@@ -16,5 +16,33 @@
   > .why-join-us-content-container
   > .why-join-us-container
   > .why-join-us-text-container {
-  @apply flex flex-col gap-6;
+  @apply flex flex-col flex-grow gap-6;
+}
+
+.why-join-us-section
+  > .why-join-us-content-container
+  > .why-join-us-container
+  > .why-join-us-text-container
+  > .why-join-us-button-container {
+  @apply flex justify-center xl:justify-start;
+}
+
+.why-join-us-section
+  > .why-join-us-content-container
+  > .why-join-us-container
+  > .why-join-us-image-container {
+  @apply relative;
+
+  @apply flex justify-center items-center h-full min-w-[329px] w-fit mx-auto xl:mx-0 xl:min-w-[520px];
+}
+
+.why-join-us-section
+  > .why-join-us-content-container
+  > .why-join-us-container
+  > .why-join-us-image-container
+  > .why-join-us-main-image {
+  filter: drop-shadow(0px 0px 15px #00000012)
+    drop-shadow(0px 25px 50px #00000040);
+
+  @apply z-[6] rounded-[13px] min-w-[329px] h-[234px] xl:min-w-[520px] xl:h-[320px] xl:rounded-[20px];
 }
