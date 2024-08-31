@@ -2,7 +2,10 @@ import Section from '../Section';
 import Link from '../Link';
 import UnorderedList from '../UnorderedList';
 
+import WindowImage from '../../assets/why-join-us-window-image.png';
+
 import './index.css';
+import WhyJoinUsImage from './WhyJoinUsImage';
 
 const CheckMarkIcon = (
   <svg
@@ -25,7 +28,9 @@ const WhyJoinUsSection = () => {
       <Section.Content className="why-join-us-content-container">
         <div className="why-join-us-container">
           <div className="why-join-us-text-container">
-            <Section.Title>Why join us</Section.Title>
+            <Section.Title className="text-center xl:text-start">
+              Why join us
+            </Section.Title>
             <UnorderedList>
               <UnorderedList.Item listIcon={CheckMarkIcon}>
                 Est et in pharetra magna adipiscing ornare aliquam.
@@ -37,13 +42,17 @@ const WhyJoinUsSection = () => {
                 Ullamcorper ornare in et egestas dolor orci.
               </UnorderedList.Item>
             </UnorderedList>
-            <Link referTo={'/sign-up'} className="w-fit" isButton={true}>
-              Sign up now
-            </Link>
+            <div className="why-join-us-button-container">
+              <Link
+                referTo={'/sign-up'}
+                className="w-fit z-[7]"
+                isButton={true}
+              >
+                Sign up now
+              </Link>
+            </div>
           </div>
-          <div>
-            <img src="" alt="image" />
-          </div>
+          <WhyJoinUsImage />
         </div>
       </Section.Content>
     </Section>

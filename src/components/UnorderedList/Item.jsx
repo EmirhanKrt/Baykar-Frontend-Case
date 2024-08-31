@@ -8,7 +8,7 @@ const Item = ({ className = '', listIcon = null, children }) => {
 
   return (
     <li className={classNameProperty}>
-      {listIcon}
+      <div className="unordered-list-item-icon-container">{listIcon}</div>
       <div className="unordered-list-item-text">{children}</div>
     </li>
   );
