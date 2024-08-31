@@ -31,7 +31,7 @@ const WhyJoinUsSection = () => {
             <Section.Title className="text-center xl:text-start">
               Why join us
             </Section.Title>
-            <UnorderedList>
+            <UnorderedList className="why-join-us-text-unordered-list-container">
               <UnorderedList.Item listIcon={CheckMarkIcon}>
                 Est et in pharetra magna adipiscing ornare aliquam.
               </UnorderedList.Item>

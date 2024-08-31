@@ -1,5 +1,5 @@
 .why-join-us-section > .why-join-us-content-container {
-  @apply px-4 py-12 w-full xl:py-40;
+  @apply w-full pb-14 pt-4 xl:py-40;
 }
 
 .why-join-us-section > .why-join-us-content-container > .why-join-us-container {
@@ -17,6 +17,14 @@
   > .why-join-us-container
   > .why-join-us-text-container {
   @apply flex flex-col flex-grow gap-6;
+}
+
+.why-join-us-section
+  > .why-join-us-content-container
+  > .why-join-us-container
+  > .why-join-us-text-container
+  > .why-join-us-text-unordered-list-container {
+  @apply gap-2 xl:gap-0;
 }
 
 .why-join-us-section
@@ -44,5 +52,5 @@
   filter: drop-shadow(0px 0px 15px #00000012)
     drop-shadow(0px 25px 50px #00000040);
 
-  @apply z-[6] rounded-[13px] min-w-[329px] h-[234px] xl:min-w-[520px] xl:h-[320px] xl:rounded-[20px];
+  @apply z-[6] rounded-[13px] min-w-[329px] h-[234px] xl:min-w-[520px] xl:h-[350px] xl:rounded-[20px];
 }

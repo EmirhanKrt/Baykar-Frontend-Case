@@ -1,3 +1,4 @@
+import CustomerCarouselSection from './components/CustomerCarouselSection';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import HighlightedProductSection from './components/HighlightedProductSection';
@@ -11,6 +12,7 @@ const App = () => {
       <HeroSection />
       <HighlightedProductSection />
       <WhyJoinUsSection />
+      <CustomerCarouselSection />
       <ScrollListener />
     </>
   );
