@@ -7,6 +7,7 @@ import GrowYourCollectionSection from './components/GrowYourCollectionSection';
 import ShoesCollectedSection from './components/ShoesCollectedSection';
 
 import ScrollListener from './utils/ScrollListener';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
       <CustomerCarouselSection />
       <GrowYourCollectionSection />
       <ShoesCollectedSection />
-      <div className="h-20">sdgpokdsfkogsdkofg</div>
+      <Footer />
       <ScrollListener />
     </>
   );
