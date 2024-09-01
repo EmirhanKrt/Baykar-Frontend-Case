@@ -16,7 +16,7 @@ const RecentlyBoughtCard = ({ customerName, shoeName, shoeImage, index }) => (
       src={shoeImage}
       className="border-[5px] border-[#FFF] rounded-[10px]"
     />
-    <div className="bg-[#E2E8F0] rounded-[5px] p-4 pb-2 w-[250px] font-normal text-[14px] leading-[19.6px] -mt-2 recently-bought ">
+    <div className="bg-[#E2E8F0] rounded-[5px] p-4 pb-2 w-[250px] font-normal text-[14px] leading-[19.6px] -mt-2 recently-bought z-[-1]">
       {customerName} collected one pair of{' '}
       <span className="font-medium text-[14px] leading-[15.4px]">
         {shoeName}
