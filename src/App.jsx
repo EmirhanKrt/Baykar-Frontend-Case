@@ -4,6 +4,7 @@ import HighlightedProductSection from './components/HighlightedProductSection';
 import WhyJoinUsSection from './components/WhyJoinUsSection';
 import CustomerCarouselSection from './components/CustomerCarouselSection';
 import GrowYourCollectionSection from './components/GrowYourCollectionSection';
+import ShoesCollectedSection from './components/ShoesCollectedSection';
 
 import ScrollListener from './utils/ScrollListener';
 
@@ -16,6 +17,7 @@ const App = () => {
       <WhyJoinUsSection />
       <CustomerCarouselSection />
       <GrowYourCollectionSection />
+      <ShoesCollectedSection />
       <div className="h-20">sdgpokdsfkogsdkofg</div>
       <ScrollListener />
     </>

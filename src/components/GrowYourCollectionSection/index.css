@@ -1,5 +1,5 @@
 .grow-your-collection-section {
-  @apply relative;
+  @apply relative overflow-y-hidden;
 }
 
 .grow-your-collection-section > .grow-your-collection-content-container {
