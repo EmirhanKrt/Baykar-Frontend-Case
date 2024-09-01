@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Baykar Frontend Case - Landing Page Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the project directory, use `npm start` script for run the project.
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
+React.js v18.3, TailwindCSS v3.4.10 with PostCSS (v8.4.41) and Autoprefixer (v10.4.20) plugins.
 
-### `npm start`
+## Key Designs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Design versions are Desktop (1440px viewport width) and Mobile (393px viewport width - iPhone 14) based.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Base sections are
+- Header Section
+- Hero Section
+  - Hero Main Content Container
+  - Hero Card Container
+- Highlighted Product Section
+- Why Join Us Section
+- Customer Carousel Section
+- Grow Your Collection Section
+- Shoes Collected Section
+- Footer Section
 
-### `npm test`
+### Desktop Version
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Header Section
 
-### `npm run build`
+![desktop-header-section](https://github.com/user-attachments/assets/b2117579-0b01-470a-9f33-165fe6806134)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Hero Section
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![desktop-hero-section](https://github.com/user-attachments/assets/9480742e-03d0-4109-89ce-6d4a1931ab16)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Highlighted Product Section
 
-### `npm run eject`
+![desktop-highlighted-product-section](https://github.com/user-attachments/assets/a6d3003b-af58-4b7f-a3aa-f5d94765e1f6)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Why Join Us Section
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![desktop-why-join-us-section](https://github.com/user-attachments/assets/d9c399a5-6290-4f13-ae9b-30131bf0c277)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Customer Carousel Section
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+User can scroll right / left on the carousel section using buttons.
 
-## Learn More
+![desktop-customer-carousel-section](https://github.com/user-attachments/assets/b7469d0b-9fde-466f-b0a2-1dd56d85b013)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Grow Your Collection Section
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![desktop-grow-your-collection-section](https://github.com/user-attachments/assets/6181cf31-e07f-4bf8-9130-7c0bfd4c89ff)
 
-### Code Splitting
+#### Shoes Collected Section
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+User can hover green dots and see content. ( Easter Egg On Türkiye :) )
 
-### Analyzing the Bundle Size
+![desktop-shoes-collected-section](https://github.com/user-attachments/assets/dfff139d-30ba-4282-b119-18f489fec32d)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Footer Section
 
-### Making a Progressive Web App
+![desktop-footer-section](https://github.com/user-attachments/assets/ae288007-e164-4c54-98ef-4618558503e3)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Mobile Version
 
-### Advanced Configuration
+#### Header Section
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![mobile-header-section](https://github.com/user-attachments/assets/d22aeb47-569b-4b62-a728-70c8e4f6c801)
 
-### Deployment
+When user clicks the hamburger menu icon, the drawer opens.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![mobile-header-hamburger-menu-drawer](https://github.com/user-attachments/assets/90d5ec74-63a9-4ad9-9737-1c3ae2e33699)
 
-### `npm run build` fails to minify
+#### Hero Section
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![mobile-hero-section](https://github.com/user-attachments/assets/5e12a7f5-fe92-4b2a-8bf3-985baeddb13f)
+
+#### Highlighted Product Section
+
+![mobile-highlighted-product-section](https://github.com/user-attachments/assets/d774e91a-9341-411e-8f9e-bd4c942d94db)
+
+#### Why Join Us Section
+
+![mobile-why-join-us-section](https://github.com/user-attachments/assets/a2806b1a-8407-463f-bc81-50337248d800)
+
+#### Customer Carousel Section
+
+User can scroll right / left on the carousel section using touchmove.
+
+![mobile-customer-carousel-section](https://github.com/user-attachments/assets/8b81ee6e-4509-4d1a-9db9-596f15619434)
+
+#### Grow Your Collection Section
+
+![mobile-grow-your-collection-section](https://github.com/user-attachments/assets/1a386251-4c3d-4983-8d7c-482e8a873645)
+
+#### Shoes Collected Section
+
+![mobile-shoes-collected-section](https://github.com/user-attachments/assets/46e0e3c3-93c7-4f94-96ae-402c64d2c72a)
+
+#### Footer Section
+
+![mobile-footer-section](https://github.com/user-attachments/assets/33e6e201-deb3-44b4-9035-878a28b71035)
+
+Thank you for reading.
