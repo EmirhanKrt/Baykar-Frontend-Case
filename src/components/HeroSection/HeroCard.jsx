@@ -1,18 +1,16 @@
 import Section from '../Section';
 
-import ThropyIcon from '../../assets/thropy-icon.svg';
-import TunnelIcon from '../../assets/tunnel-icon.svg';
-import TvIcon from '../../assets/tv-icon.svg';
+import constants from '../../constants';
 
-import BlueTriangleIcon from '../../assets/blue-triangle-icon.svg';
-import GreenTriangleIcon from '../../assets/green-triangle-icon.svg';
-import PurpleCircleIcon from '../../assets/purple-circle-icon.svg';
+import BackgrounBlueTriangle from '../../assets/hero-section/triangle-blue.webp';
+import BackgrounGreenTriangle from '../../assets/hero-section/triangle-green.webp';
+import BackgrounPurpleCircle from '../../assets/hero-section/circle-purple.webp';
 
 const Card = ({ src, subIconSrc, title, description }) => {
   return (
     <div className="hero-card-item" key={title}>
       <div className="hero-card-icon-container">
-        <img src={src} alt={title + ' Icon'} className="hero-card-main-icon" />
+        {src}
         <img
           src={subIconSrc}
           alt={title + ' Sub Icon'}
@@ -29,22 +27,22 @@ const Card = ({ src, subIconSrc, title, description }) => {
 
 const cardDetails = [
   {
-    src: ThropyIcon,
-    subIconSrc: BlueTriangleIcon,
+    src: constants.SvgIcons.HeroSection.Thropy,
+    subIconSrc: BackgrounBlueTriangle,
     title: 'Nibh viverra',
     description:
       'Sit bibendum donec dolor fames neque vulputate non sit aliquam. Consequat turpis natoque leo, massa.'
   },
   {
-    src: TunnelIcon,
-    subIconSrc: GreenTriangleIcon,
+    src: constants.SvgIcons.HeroSection.Tunnel,
+    subIconSrc: BackgrounGreenTriangle,
     title: 'Cursus amet',
     description:
       'Sit bibendum donec dolor fames neque vulputate non sit aliquam. Consequat turpis natoque leo, massa.'
   },
   {
-    src: TvIcon,
-    subIconSrc: PurpleCircleIcon,
+    src: constants.SvgIcons.HeroSection.Tv,
+    subIconSrc: BackgrounPurpleCircle,
     title: 'Ipsum fermentum',
     description:
       'Sit bibendum donec dolor fames neque vulputate non sit aliquam. Consequat turpis natoque leo, massa.'

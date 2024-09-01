@@ -2,8 +2,8 @@ import Section from '../Section';
 
 import './index.css';
 
-import World from '../../assets/shoes-collected-section/world.svg';
-import ShoeImage from '../../assets/shoes-collected-section/shoe.png';
+import World from '../../assets/shoes-collected-section/world.webp';
+import ShoeImage from '../../assets/shoes-collected-section/shoe.webp';
 
 const greenDots = [
   {

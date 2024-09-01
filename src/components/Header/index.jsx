@@ -7,7 +7,8 @@ import Drawer from '../Drawer';
 import Button from '../Button';
 import Link from '../Link';
 
-import HamburgerMenuIcon from '../../assets/hamburger-menu-logo.svg';
+import constants from '../../constants';
+
 import './index.css';
 const Header = () => {
   const { width } = useWindowSize();
@@ -37,7 +38,7 @@ const Header = () => {
                 onClick={handleOpen}
               >
                 <Button className="header-hamburger-menu">
-                  <img src={HamburgerMenuIcon} alt="Menu" />
+                  {constants.SvgIcons.Header.HamburgerMenu}
                 </Button>
               </div>
 

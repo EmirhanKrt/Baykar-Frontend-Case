@@ -1,11 +1,11 @@
-import WindowImage from '../../assets/why-join-us-window-image.png';
+import MainImage from '../../assets/why-join-us-section/main-image.webp';
 
-import BackgroundCircleBlue from '../../assets/why-join-us-background-circle-blue.png';
-import BackgroundCircleGreen from '../../assets/why-join-us-background-circle-green.png';
-import BackgroundRectangleYellow from '../../assets/why-join-us-background-rectangle-yellow.png';
-import BackgroundRectangleOrange from '../../assets/why-join-us-background-rectangle-orange.png';
-import BackgroundRectanglePurple from '../../assets/why-join-us-background-rectangle-purple.png';
-import BackgroundRectangleRed from '../../assets/why-join-us-background-rectangle-red.png';
+import BackgroundCircleBlue from '../../assets/why-join-us-section/circle-blue.webp';
+import BackgroundCircleGreen from '../../assets/why-join-us-section/circle-green.webp';
+import BackgroundRectangleYellow from '../../assets/why-join-us-section/rectangle-yellow.webp';
+import BackgroundRectangleOrange from '../../assets/why-join-us-section/rectangle-orange.webp';
+import BackgroundRectanglePurple from '../../assets/why-join-us-section/rectangle-purple.webp';
+import BackgroundRectangleRed from '../../assets/why-join-us-section/rectangle-red.webp';
 
 const BackgroundImage = ({ src, alt, className, imgClassName }) => {
   return (
@@ -59,8 +59,8 @@ const WhyJoinUsImage = () => {
   return (
     <div className="why-join-us-image-container">
       <img
-        src={WindowImage}
-        alt="Why Join Us Section Window Image"
+        src={MainImage}
+        alt="Why Join Us Section Main Image"
         className="why-join-us-main-image"
       />
       {backgroundImages.map(BackgroundImage)}

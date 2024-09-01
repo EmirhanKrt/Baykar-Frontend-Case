@@ -7,38 +7,38 @@ import useWindowSize from '../../hooks/useWindowSize';
 
 import constants from '../../constants';
 
-import TabItemImage from '../../assets/grow-your-collection-section/tab-item-image.png';
+import TabItemImage from '../../assets/grow-your-collection-section/tab-item-image.webp';
 
 import './index.css';
 
 const listItems = [
   {
-    listIcon: constants.SvgIcons.Search,
+    listIcon: constants.SvgIcons.GrowYourCollectionSection.Search,
     displayText: 'Bibendum tellus',
     tabItemImage: TabItemImage
   },
   {
-    listIcon: constants.SvgIcons.Shield,
+    listIcon: constants.SvgIcons.GrowYourCollectionSection.Shield,
     displayText: 'Cras eget',
     tabItemImage: TabItemImage
   },
   {
-    listIcon: constants.SvgIcons.Rocket,
+    listIcon: constants.SvgIcons.GrowYourCollectionSection.Rocket,
     displayText: 'Dolor pharetra',
     tabItemImage: TabItemImage
   },
   {
-    listIcon: constants.SvgIcons.Screen,
+    listIcon: constants.SvgIcons.GrowYourCollectionSection.Screen,
     displayText: 'Amet, fringilla',
     tabItemImage: TabItemImage
   },
   {
-    listIcon: constants.SvgIcons.Podcast,
+    listIcon: constants.SvgIcons.GrowYourCollectionSection.Podcast,
     displayText: 'Amet nibh',
     tabItemImage: TabItemImage
   },
   {
-    listIcon: constants.SvgIcons.Settings,
+    listIcon: constants.SvgIcons.GrowYourCollectionSection.Settings,
     displayText: 'Sed velit',
     tabItemImage: TabItemImage
   }
@@ -59,7 +59,11 @@ const List = ({
           <UnorderedList.Item
             key={index}
             listIcon={listIcon}
-            activeIcon={width >= 1024 ? constants.SvgIcons.RightArrow : null}
+            activeIcon={
+              width >= 1024
+                ? constants.SvgIcons.GrowYourCollectionSection.ActiveRightArrow
+                : null
+            }
             className={
               activeItemIndex === index || hoveredItemIndex === index
                 ? 'active'
@@ -141,9 +145,9 @@ const GrowYourCollectionSection = () => {
         </div>
       </Section.Content>
       <div className="grow-your-collection-background-layer-image-container">
-        {constants.SvgIcons.GrowYourCollectionSectionBottomLayer}
-        {constants.SvgIcons.GrowYourCollectionSectionMiddleLayer}
-        {constants.SvgIcons.GrowYourCollectionSectionTopLayer}
+        {constants.SvgIcons.GrowYourCollectionSection.BottomLayer}
+        {constants.SvgIcons.GrowYourCollectionSection.MiddleLayer}
+        {constants.SvgIcons.GrowYourCollectionSection.TopLayer}
       </div>
     </Section>
   );

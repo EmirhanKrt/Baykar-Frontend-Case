@@ -1,27 +1,23 @@
-import {
-  useState,
-  useRef,
-  useLayoutEffect,
-  useCallback,
-  useEffect
-} from 'react';
+import { useState, useRef, useLayoutEffect } from 'react';
 
 import Section from '../Section';
 import Button from '../Button';
 
 import useWindowSize from '../../hooks/useWindowSize';
 
-import Kontrastr from '../../assets/customer-carousel-section/kontrastr-logo.png';
-import Zoomer from '../../assets/customer-carousel-section/zoomer-logo.png';
-import Shells from '../../assets/customer-carousel-section/shells-logo.png';
-import ArtVenture from '../../assets/customer-carousel-section/art-venture-logo.png';
-import Waves from '../../assets/customer-carousel-section/waves-logo.png';
+import constants from '../../constants';
 
-import RalphEdwards from '../../assets/customer-carousel-section/ralph-edwards-image.jpg';
-import HellenJummy from '../../assets/customer-carousel-section/hellen-jummy-image.jpg';
-import HellenaJohn from '../../assets/customer-carousel-section/hellena-john-image.jpg';
-import DavidOshodi from '../../assets/customer-carousel-section/david-oshodi-image.jpg';
-import CharoletteHanlin from '../../assets/customer-carousel-section/charolette-hanlin-image.jpg';
+import Kontrastr from '../../assets/customer-carousel-section/kontrastr-logo.webp';
+import Zoomer from '../../assets/customer-carousel-section/zoomer-logo.webp';
+import Shells from '../../assets/customer-carousel-section/shells-logo.webp';
+import ArtVenture from '../../assets/customer-carousel-section/art-venture-logo.webp';
+import Waves from '../../assets/customer-carousel-section/waves-logo.webp';
+
+import RalphEdwards from '../../assets/customer-carousel-section/ralph-edwards-image.webp';
+import HellenJummy from '../../assets/customer-carousel-section/hellen-jummy-image.webp';
+import HellenaJohn from '../../assets/customer-carousel-section/hellena-john-image.webp';
+import DavidOshodi from '../../assets/customer-carousel-section/david-oshodi-image.webp';
+import CharoletteHanlin from '../../assets/customer-carousel-section/charolette-hanlin-image.webp';
 
 import './index.css';
 
@@ -105,6 +101,11 @@ const cards = [
   }
 ];
 
+/* 
+    The main idea of carousel is centering the current card.
+    So for devices which's viewport width is more than 1024 px; adding empty cards.
+*/
+
 const CARDS_CENTER_INDEX = Math.floor(cards.length / 2);
 
 const emptyCards = [];
@@ -115,50 +116,6 @@ for (let index = 0; index < CARDS_CENTER_INDEX; index++) {
 
 const CARDS_WITH_EMPTY_CENTER_INDEX = Math.floor(
   (cards.length + emptyCards.length * 2) / 2
-);
-
-const leftArrowSvg = (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M18.5 12H6H18.5ZM6 12L12 6L6 12ZM6 12L12 18L6 12Z"
-      fill="currentColor"
-    />
-    <path
-      d="M6 12L12 18M18.5 12H6H18.5ZM6 12L12 6L6 12Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
-const rightArrowSvg = (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M6 12H18.5H6ZM18.5 12L12.5 6L18.5 12ZM18.5 12L12.5 18L18.5 12Z"
-      fill="currentColor"
-    />
-    <path
-      d="M18.5 12L12.5 18M6 12H18.5H6ZM18.5 12L12.5 6L18.5 12Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
 );
 
 const Card = ({ companyLogo, comment, commentedBy, key, isEmpty = false }) => {
@@ -226,6 +183,21 @@ const CustomerCarouselSection = () => {
         break;
     }
 
+    const targetChild = carousel.children[tempCurrentIndex];
+    if (!targetChild) return null;
+
+    const rect = targetChild.getBoundingClientRect();
+
+    // Send user to section container's top
+    // 222 is height of the section title
+    // 96 is height og the header
+    const offsetTop = rect.top + window.scrollY - 222 - 96;
+
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+    });
+
     carousel.children[tempCurrentIndex].scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
@@ -236,10 +208,12 @@ const CustomerCarouselSection = () => {
   };
 
   useLayoutEffect(() => {
+    // Calculates horizontally center position and scrolls carousel
     const centerCarousel = () => {
       const carousel = carouselRef.current;
       if (!carousel || !carousel.children.length) return null;
 
+      // Selecting target index different for desktop and mobile views because of empty cards
       const targetIndex =
         width >= 1024 ? CARDS_WITH_EMPTY_CENTER_INDEX : CARDS_CENTER_INDEX;
 
@@ -278,14 +252,14 @@ const CustomerCarouselSection = () => {
           <div className="customer-carousel-title-button-container">
             <Button
               className="customer-carousel-title-button"
-              leftIcon={leftArrowSvg}
+              leftIcon={constants.SvgIcons.CustomerCarouselSection.LeftArrow}
               onClick={() => {
                 handleSlider('left');
               }}
             ></Button>
             <Button
               className="customer-carousel-title-button"
-              leftIcon={rightArrowSvg}
+              leftIcon={constants.SvgIcons.CustomerCarouselSection.RightArrow}
               onClick={() => {
                 handleSlider('right');
               }}

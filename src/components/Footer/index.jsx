@@ -59,27 +59,27 @@ const Footer = () => {
             <h4>Get the App</h4>
             <div className="footer-social-navigation-content-container">
               <Navigation.Item referTo={'app-store'}>
-                {constants.SvgIcons.AppStore}
+                {constants.SvgIcons.FooterSection.AppStore}
               </Navigation.Item>
               <Navigation.Item referTo={'google-play'}>
-                {constants.SvgIcons.GooglePlay}
+                {constants.SvgIcons.FooterSection.GooglePlay}
               </Navigation.Item>
               <h4 className="mt-auto !pt-12">Follow Us</h4>
               <div className="flex gap-4">
                 <Navigation.Item referTo={'youtube'}>
-                  {constants.SvgIcons.Youtube}
+                  {constants.SvgIcons.FooterSection.Youtube}
                 </Navigation.Item>
                 <Navigation.Item referTo={'facebook'}>
-                  {constants.SvgIcons.Facebook}
+                  {constants.SvgIcons.FooterSection.Facebook}
                 </Navigation.Item>
                 <Navigation.Item referTo={'twitter'}>
-                  {constants.SvgIcons.Twitter}
+                  {constants.SvgIcons.FooterSection.Twitter}
                 </Navigation.Item>
                 <Navigation.Item referTo={'instagram'}>
-                  {constants.SvgIcons.Instagram}
+                  {constants.SvgIcons.FooterSection.Instagram}
                 </Navigation.Item>
                 <Navigation.Item referTo={'linked-in'}>
-                  {constants.SvgIcons.LinkedIn}
+                  {constants.SvgIcons.FooterSection.LinkedIn}
                 </Navigation.Item>
               </div>
             </div>
@@ -94,7 +94,7 @@ const Footer = () => {
             <Navigation.Item referTo={'Contact'}>Contact</Navigation.Item>
             <Navigation.Item referTo={'tr'}>
               <div className="flex gap-2">
-                <span>{constants.SvgIcons.GlobeWorld}</span>
+                <span>{constants.SvgIcons.FooterSection.GlobeWorld}</span>
                 <span>EN</span>
               </div>
             </Navigation.Item>

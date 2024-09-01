@@ -61,7 +61,7 @@
   > .hero-card-item
   > .hero-card-icon-container
   > .hero-card-background-icon {
-  @apply absolute left-8 top-0 z-[1];
+  @apply absolute left-8 top-0 z-[-1];
 }
 .hero-section
   > .hero-card-content-container
