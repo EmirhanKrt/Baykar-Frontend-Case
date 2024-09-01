@@ -64,7 +64,7 @@ const Footer = () => {
               <Navigation.Item referTo={'google-play'}>
                 {constants.SvgIcons.FooterSection.GooglePlay}
               </Navigation.Item>
-              <h4 className="mt-auto !pt-12">Follow Us</h4>
+              <h4 className="mt-auto !pt-12 text-[#E2E8F0]">Follow Us</h4>
               <div className="flex gap-4">
                 <Navigation.Item referTo={'youtube'}>
                   {constants.SvgIcons.FooterSection.Youtube}
