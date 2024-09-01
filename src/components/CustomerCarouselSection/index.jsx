@@ -1,4 +1,10 @@
-import { useState, useRef, useLayoutEffect, useCallback } from 'react';
+import {
+  useState,
+  useRef,
+  useLayoutEffect,
+  useCallback,
+  useEffect
+} from 'react';
 
 import Section from '../Section';
 import Button from '../Button';
@@ -185,80 +191,82 @@ const Card = ({ companyLogo, comment, commentedBy, key, isEmpty = false }) => {
   );
 };
 
-const Slider = () => {
+const CustomerCarouselSection = () => {
   const { width } = useWindowSize();
 
-  const isDesktopView = width >= 1024;
-
-  return (
-    <>
-      {isDesktopView && emptyCards && emptyCards.map(Card)}
-      {cards && cards.map(Card)}
-      {isDesktopView &&
-        emptyCards &&
-        emptyCards
-          .reverse()
-          .map(({ key, isEmpty }) => ({
-            key: key.replace('left', 'right'),
-            isEmpty
-          }))
-          .map(Card)}
-    </>
-  );
-};
-
-const CustomerCarouselSection = () => {
   const [currentIndex, setCurrentIndex] = useState(
     CARDS_WITH_EMPTY_CENTER_INDEX
   );
 
   const carouselRef = useRef(null);
 
-  const handleSlider = useCallback(
-    (direction) => {
-      const carousel = carouselRef.current;
-      if (!carousel) return;
-
-      let tempCurrentIndex = currentIndex;
-
-      switch (direction) {
-        case 'left':
-          tempCurrentIndex = Math.max(
-            tempCurrentIndex - 1,
-            CARDS_WITH_EMPTY_CENTER_INDEX - CARDS_CENTER_INDEX
-          );
-
-          break;
-
-        case 'right':
-          tempCurrentIndex = Math.min(
-            tempCurrentIndex + 1,
-            CARDS_WITH_EMPTY_CENTER_INDEX + CARDS_CENTER_INDEX
-          );
-          break;
-
-        default:
-          break;
-      }
-
-      carousel.children[tempCurrentIndex].scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-        inline: 'center'
-      });
-
-      setCurrentIndex(tempCurrentIndex);
-    },
-    [currentIndex]
-  );
-
-  useLayoutEffect(() => {
+  const handleSlider = (direction) => {
     const carousel = carouselRef.current;
     if (!carousel) return;
 
-    const middlePosition = (carousel.scrollWidth - carousel.clientWidth) / 2;
-    carousel.scrollLeft = middlePosition;
-  }, []);
+    let tempCurrentIndex = currentIndex;
+
+    switch (direction) {
+      case 'left':
+        tempCurrentIndex = Math.max(
+          tempCurrentIndex - 1,
+          CARDS_WITH_EMPTY_CENTER_INDEX - CARDS_CENTER_INDEX
+        );
+
+        break;
+
+      case 'right':
+        tempCurrentIndex = Math.min(
+          tempCurrentIndex + 1,
+          CARDS_WITH_EMPTY_CENTER_INDEX + CARDS_CENTER_INDEX
+        );
+        break;
+
+      default:
+        break;
+    }
+
+    carousel.children[tempCurrentIndex].scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+
+    setCurrentIndex(tempCurrentIndex);
+  };
+
+  useLayoutEffect(() => {
+    const centerCarousel = () => {
+      const carousel = carouselRef.current;
+      if (!carousel || !carousel.children.length) return null;
+
+      const targetIndex =
+        width >= 1024 ? CARDS_WITH_EMPTY_CENTER_INDEX : CARDS_CENTER_INDEX;
+
+      const targetChild = carousel.children[targetIndex];
+      if (!targetChild) return null;
+
+      const gap = parseFloat(getComputedStyle(carousel).gap) || 0;
+
+      let totalWidth = 0;
+      for (let i = 0; i < targetIndex; i++) {
+        const item = carousel.children[i];
+        totalWidth += item.offsetWidth + gap;
+      }
+
+      totalWidth += targetChild.offsetWidth / 2;
+
+      const carouselCenter = carousel.clientWidth / 2;
+
+      const scrollPosition = totalWidth - carouselCenter;
+
+      carousel.scrollLeft = scrollPosition;
+
+      return null;
+    };
+
+    centerCarousel();
+  }, [width]);
 
   return (
     <Section className="customer-carousel-section">
@@ -291,7 +299,17 @@ const CustomerCarouselSection = () => {
           ref={carouselRef}
           className="customer-carousel-card-slider-container"
         >
-          <Slider />
+          {width >= 1024 && emptyCards && emptyCards.map(Card)}
+          {cards && cards.map(Card)}
+          {width >= 1024 &&
+            emptyCards &&
+            emptyCards
+              .reverse()
+              .map(({ key, isEmpty }) => ({
+                key: key.replace('left', 'right'),
+                isEmpty
+              }))
+              .map(Card)}
         </div>
         <div className="customer-carousel-background-color"></div>
       </Section.Content>
